@@ -103,6 +103,7 @@ res= resolution(res)
 recording_audio = threading.Thread(target=record_audio,args=(input("Enter the 1 for external audio and 2 for internal : "),))
 out = cv2.VideoWriter('video.mp4',vid_typ[ext],fps,res)
 
+print("Press 'esc' on the recorder screen to stop recording")
 
 threading.Thread(target=key_pressed).start()
 start = time.time()
